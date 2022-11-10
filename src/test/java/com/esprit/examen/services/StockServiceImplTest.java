@@ -16,6 +16,13 @@ public class StockServiceImplTest {
 	IStockService stockService;
 	
 	@Test
+    @Order(1)
+    public void testRetrieveAllStocks() {
+        List<Stock> listStocks = stockService.retrieveAllStocks();
+        Assertions.assertEquals(0, listStocks.size());
+    }
+	
+	@Test
 	public void testAddStock() {
 	//	List<Stock> stocks = stockService.retrieveAllStocks();
 	//	int expected=stocks.size();
