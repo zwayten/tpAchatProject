@@ -16,7 +16,6 @@ public class StockServiceImplTest {
 	IStockService stockService;
 	
 	@Test
-    @Order(1)
     public void testRetrieveAllStocks() {
         List<Stock> listStocks = stockService.retrieveAllStocks();
         Assertions.assertEquals(0, listStocks.size());
