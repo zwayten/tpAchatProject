@@ -16,7 +16,7 @@ services:
 
   spring_app:
     image: apachee1/achat
-    container_name: achatspring
+    container_name: ghaith-achat-spring
     restart: on-failure
     environment:
      - spring.datasource.url=jdbc:mysql://localhost:3306/tpachato?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
@@ -26,7 +26,7 @@ services:
 
   angular_app:
     image: anas1412/achatfront
-    container_name: achatangular
+    container_name: ghaith-achat-angular
     restart: on-failure
     ports:
      - 4200:80
