@@ -1,8 +1,8 @@
 version: "3"
 
 services:
-  mysqldb:
-    container_name: mysqldb
+  mysqldbs:
+    container_name: mysqldbs
     image: mysql/mysql-server:8.0
     restart: unless-stopped
     ports:
@@ -22,7 +22,7 @@ services:
      - spring.datasource.url=jdbc:mysql://localhost:3306/tpachato?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
      - 8089:8089
     depends_on:
-     - mysqldb
+     - mysqldbs
 
   angular_app:
     image: anas1412/achatfront
