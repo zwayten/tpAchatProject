@@ -1,6 +1,9 @@
-FROM openjdk:8-jdk-alpine
-COPY --from=build target/tpAchatProject.jar tpAchatProject.jar
-ENTRYPOINT ["java","-jar","/tpAchatProject.jar"]
-EXPOSE 8089
+FROM maven:3.8.2-jdk-8
+
+WORKDIR /spring-app
+COPY . .
+RUN mvn clean install
+
+CMD mvn spring-boot:run
 
 
