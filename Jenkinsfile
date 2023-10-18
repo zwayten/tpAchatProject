@@ -24,6 +24,18 @@ pipeline {
                 url : 'https://github.com/zwayten/tpAchatProject.git';
             }
         }
+
+        stage('Clean Maven Install') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Compile Porject') {
+            steps {
+                sh 'mvn compile'
+            }
+        }
     }
 
 }
