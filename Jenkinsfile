@@ -25,15 +25,21 @@ pipeline {
             }
         }
 
-        stage('Clean Maven Install') {
+        // stage('Clean Maven Install') {
+        //     steps {
+        //         sh 'mvn clean install'
+        //     }
+        // }
+
+        stage('Compile Porject') {
             steps {
-                sh 'mvn clean install'
+                sh 'mvn compile'
             }
         }
 
         stage('Compile Porject') {
             steps {
-                sh 'mvn compile'
+                sh 'mvn test'
             }
         }
     }
