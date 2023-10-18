@@ -37,7 +37,7 @@ pipeline {
             }
         }
 
-        stage('Compile Porject') {
+        stage('RUnning tests') {
             steps {
                 sh 'mvn test'
             }
