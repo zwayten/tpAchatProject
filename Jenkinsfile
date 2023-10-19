@@ -20,7 +20,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 echo 'Pulling'
-                git branch: 'main',
+                git branch: 'yassine',
                 url : 'https://github.com/zwayten/tpAchatProject.git';
             }
         }
